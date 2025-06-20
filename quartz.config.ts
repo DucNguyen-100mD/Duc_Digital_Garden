@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Duc_Digital_Garden",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,8 +16,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "https://DucNguyen.github.io/Duc_Digital_Garden/",
+    ignorePatterns: ["private", "templates", ".obsidian", ".git", ".github", "node_modules"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",

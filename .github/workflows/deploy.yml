@@ -1,0 +1,40 @@
+name: Deploy Quartz site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Hoặc master, tùy thuộc vào nhánh chính của repository của bạn
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Để đảm bảo graph view hoạt động đúng
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Nên dùng Node.js 20 hoặc phiên bản mới nhất được Quartz khuyến nghị
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Quartz site
+        run: npx quartz build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public # Thư mục output của Quartz là 'public' theo mặc định
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
