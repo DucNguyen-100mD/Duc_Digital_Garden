@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Nên dùng Node.js 20 hoặc phiên bản mới nhất được Quartz khuyến nghị
+          node-version: 22 # Nên dùng Node.js 20 hoặc phiên bản mới nhất được Quartz khuyến nghị
 
       - name: Install dependencies
         run: npm install
