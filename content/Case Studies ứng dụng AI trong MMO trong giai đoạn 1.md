@@ -1,11 +1,11 @@
 ![[Pasted image 20250621052210.png]]
-# <u>Tiêu chí lựa chọn ban đầu</u>
+# Tiêu chí lựa chọn ban đầu
 - **Chi phí ban đầu thấp**
 - **Rào cản kỹ thuật không quá cao**: không đòi hỏi kỹ năng lập trình phức tạp hoặc có thể ứng dụng các công cụ no-code/dễ học
 - **Qui trình rõ ràng**
 - **Tiềm năng doanh thu tốt**
 
-# <u>Case study 1: Bán Clip-art trên Etsy bằng Midjourney (CS5)</u> 
+# Case study 1: Bán Clip-art trên Etsy bằng Midjourney (CS5)
 ## 1 . **THÔNG TIN TỔNG QUAN**
 - **Thời gian triển khai**: Tháng **11/2023** (khởi tạo shop) đến tháng **12/2023** (tháng đầu đạt doanh thu), tăng trưởng đến đầu 2024.
 - **Quốc gia triển khai**: Không rõ, hoạt động trên Etsy toàn cầu, nhắm đến người dùng tìm kiếm clip-art theo chủ đề phổ biến (hoa, động vật, lễ hội)
@@ -76,7 +76,7 @@
 - Link gốc: journeyaiart.Com - Sell Etsy AI Art
 
 
-# <u>Case study 2: Bán Prompt ChatGPT (CS13)</u>
+# Case study 2: Bán Prompt ChatGPT (CS13)
 ## 1 . **THÔNG TIN TỔNG QUAN**
 - **Tên nhân vật hoặc thương hiệu cá nhân**: codewithbernard (Redditor, ẩn danh, tự xưng là web developer).
 - **Thời gian triển khai**: 6 tháng (từ tháng 7/2023 đến tháng 12/2023, dựa trên bài đăng ngày 7/12/2023).
@@ -150,7 +150,7 @@
 - Website dự án: https://chromewebstore.google.com/detail/prompt-book/bmjlmnhdmfpkdhjfichjfciedemjaobb
 - Blog Medium của nhân vật: https://bernardbad.medium.com/
 
-# <u>Case study 3: Kiếm 2.348 USD/tháng từ Website Ngách và Pinterest (CS22)</u>
+# Case study 3: Kiếm 2.348 USD/tháng từ Website Ngách và Pinterest (CS22)
 ## 1 . **THÔNG TIN TỔNG QUAN**
 - **Tên nhân vật hoặc thương hiệu cá nhân**: korni (thành viên **BlackHatWorld**, tham gia từ ngày 24/5/2010, có kinh nghiệm xây dựng website ngách từ năm 2010. Trước đây, korni đã thất bại với một website phụ thuộc vào Google SEO do các bản cập nhật thuật toán năm 2023).
 - **Thời gian triển khai**: Bắt đầu từ ngày 9/1/2024, với các cập nhật được báo cáo đến ngày 7/6/2024 (khoảng 150 ngày). Các mốc thời gian quan trọng:
@@ -382,7 +382,7 @@
 ## 7. REFERENCES
 Link gốc: https://www.blackhatworld.com/seo/journey-growing-a-niche-website-from-scratch-with-pinterest-as-a-main-traffic-source-goal-10m-monthly-pinterest-views.1561227/
 
-# <u>Case study 4: Faceless YouTube Crypto – Lãi 2.000 USD/Tháng (CS26)</u>
+# Case study 4: Faceless YouTube Crypto – Lãi 2.000 USD/Tháng (CS26)
 ## 1 . THÔNG TIN TỔNG QUAN
 - **Thành tựu hiện tại (tính đến 5/2025)**:
 	- YouTube: 21,355 subscriber (người đăng ký), 16,800 views/28 ngày, 1,200 giờ xem, +217 sub mới.
