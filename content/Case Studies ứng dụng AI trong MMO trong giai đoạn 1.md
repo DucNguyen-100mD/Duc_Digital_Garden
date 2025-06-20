@@ -1,3 +1,4 @@
+![[Pasted image 20250621052210.png]]
 # <u>Tiêu chí lựa chọn ban đầu</u>
 - **Chi phí ban đầu thấp**
 - **Rào cản kỹ thuật không quá cao**: không đòi hỏi kỹ năng lập trình phức tạp hoặc có thể ứng dụng các công cụ no-code/dễ học
