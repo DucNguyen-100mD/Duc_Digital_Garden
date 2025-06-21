@@ -135,3 +135,107 @@ table img {
     border: none;
     box-shadow: none;
 }
+
+
+
+
+
+
+
+
+
+
+/************************************************ custom.css - Tùy chỉnh Dark Mode ************************************************/
+
+/* Áp dụng các style này CHỈ khi chế độ Dark Mode được bật */
+html[saved-theme="dark"] {
+    /*
+    // Các biến màu mặc định trong Dark Mode của Quartz (từ quartz.config.ts)
+    // --light: #212121;     (Nền tối nhất)
+    // --lightgray: #303030; (Nền các khối, border)
+    // --gray: #606060;      (Màu chữ phụ, icon)
+    // --darkgray: #CCCCCC;  (Màu chữ chính - sáng)
+    // --dark: #F0F0F0;      (Màu nền của sidebar/header - sáng hơn)
+    // --secondary: #8B5CF6; (Màu nhấn - tím)
+    // --tertiary: #84cc16;  (Màu bổ sung - xanh lá)
+    // --highlight: rgba(143, 159, 169, 0.15); (Highlight khi chọn text)
+    */
+
+    /*
+    /* -- TÙY CHỈNH CHỮ IN ĐẬM, IN NGHIÊNG, GẠCH CHÂN -- */
+    */
+
+    strong { /* Chữ BÔI ĐEN */
+        color: var(--dark); /* Hoặc màu nổi bật hơn như var(--secondary) nếu bạn muốn rất nổi */
+        /* font-weight: 700; */ /* Mặc định đã đậm, có thể tăng thêm nếu font cho phép */
+    }
+
+    em { /* Chữ IN NGHIÊNG */
+        color: var(--darkgray); /* Giữ màu chữ chính hoặc chọn màu khác subtle hơn */
+        /* font-style: italic; */ /* Đã mặc định */
+    }
+
+    u { /* Chữ GẠCH CHÂN */
+        color: var(--secondary); /* Màu nhấn để nổi bật */
+        text-decoration-color: var(--secondary); /* Màu của đường gạch chân */
+        text-decoration-thickness: 1.5px; /* Độ dày của đường gạch chân */
+    }
+
+    /*
+    /* -- TÙY CHỈNH HEADING LEVELS (H1, H2, H3,...) -- */
+    */
+
+    h1 {
+        color: var(--dark); /* Màu sáng nhất hoặc nổi bật nhất cho tiêu đề chính */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng đổ bóng nhẹ cho chữ */
+    }
+
+    h2 {
+        color: var(--darkgray); /* Giữ màu chữ chính hoặc chọn màu nhấn subtle */
+        border-bottom: 1px solid var(--gray); /* Đường kẻ dưới tiêu đề để phân tách */
+        padding-bottom: 0.3rem; /* Khoảng cách giữa chữ và đường kẻ */
+        margin-top: 2rem; /* Khoảng cách trên tiêu đề */
+    }
+
+    h3 {
+        color: var(--secondary); /* Màu nhấn cho tiêu đề phụ */
+    }
+
+    h4, h5, h6 {
+        color: var(--darkgray); /* Giữ màu chữ chính */
+        /* text-transform: uppercase; */ /* Chuyển thành chữ in hoa (tùy chọn) */
+        /* font-size: 0.9em; */ /* Kích thước nhỏ hơn */
+    }
+
+    /*
+    /* -- CÁC TÙY CHỈNH KHÁC (ví dụ: liên kết) -- */
+    */
+
+    a { /* Liên kết */
+        color: var(--secondary); /* Màu tím nổi bật */
+        text-decoration: underline; /* Gạch chân cho liên kết */
+        text-decoration-color: var(--secondary); /* Màu gạch chân */
+        text-decoration-thickness: 1px; /* Độ dày gạch chân */
+    }
+
+    a:hover {
+        color: var(--tertiary); /* Đổi màu khi rê chuột */
+        text-decoration-color: var(--tertiary);
+    }
+
+    /*
+    /* -- Tùy chỉnh màu nền cho các khối code và trích dẫn trong Dark Mode (Ví dụ) -- */
+    */
+
+    pre { /* Khối code */
+        background-color: var(--lightgray); /* Nền hơi sáng hơn cho dễ đọc code */
+        border-left: 4px solid var(--tertiary); /* Thêm đường kẻ nhấn */
+        color: var(--darkgray); /* Màu chữ code */
+    }
+
+    blockquote { /* Trích dẫn */
+        border-left: 4px solid var(--gray); /* Đường kẻ bên trái */
+        color: var(--gray); /* Màu chữ xám hơn */
+        background-color: var(--light); /* Nền hơi tối hơn so với nền trang */
+    }
+}
