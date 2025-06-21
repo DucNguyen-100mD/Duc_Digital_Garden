@@ -358,3 +358,68 @@ html[saved-theme="dark"] {
         color: var(--gray);
     }
 }
+
+
+
+
+
+
+/************************************************* custom.css - Tối ưu hóa khoảng cách trong Table of Contents (TOC) *************************************************/
+
+.toc-content {
+    list-style: none; /* Bỏ dấu chấm mặc định của list */
+    padding: 0; /* Đảm bảo không có padding thừa từ ul */
+    margin: 0; /* Đảm bảo không có margin thừa từ ul */
+}
+
+.toc-content li {
+    margin-bottom: 0.6rem; /* Khoảng cách giữa các mục TOC riêng biệt */
+    margin-top: 0; /* Đảm bảo không có khoảng cách thừa phía trên */
+}
+
+.toc-content li a {
+    display: block; /* Biến link thành khối để dễ click và áp dụng padding */
+    padding: 0.3rem 0.5rem; /* Padding bên trong mỗi mục link */
+    line-height: 1.4em; /* Tăng chiều cao dòng để chữ không bị dính */
+    text-decoration: none; /* Bỏ gạch chân mặc định của link (nếu không muốn) */
+    border-radius: 4px; /* Bo tròn góc */
+    color: var(--darkgray); /* Màu chữ mặc định */
+
+    /* Xử lý tiêu đề dài trong TOC: cắt bớt và thêm dấu chấm lửng (...) */
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    overflow: hidden; /* Ẩn phần chữ bị tràn */
+    text-overflow: ellipsis; /* Thêm dấu ... ở cuối */
+}
+
+/* Điều chỉnh lại padding cho các mục con trong TOC (phân cấp) */
+.toc-content ul { /* Áp dụng cho các ul lồng nhau trong TOC */
+    padding-left: 1em; /* Thụt lề cho các cấp con của mục lục */
+    margin-top: 0.2rem; /* Khoảng cách nhỏ phía trên các danh sách con */
+}
+
+/* Các trạng thái hover/active trong TOC */
+.toc-content li a:hover {
+    background-color: var(--highlight); /* Nền khi rê chuột */
+    color: var(--dark); /* Màu chữ khi rê chuột */
+}
+
+.toc-content li a.active { /* Mục TOC đang hiển thị trên trang */
+    background-color: var(--highlight); /* Nền cho mục hiện tại */
+    color: var(--secondary); /* Màu chữ nhấn cho mục hiện tại */
+    font-weight: 600; /* In đậm mục hiện tại */
+}
+
+/* Dark Mode cho TOC */
+html[saved-theme="dark"] {
+    .toc-content li a {
+        color: var(--darkgray); /* Màu chữ mặc định sáng hơn */
+    }
+    .toc-content li a:hover {
+        background-color: var(--lightgray); /* Nền khi hover trong dark mode */
+        color: var(--dark); /* Chữ sáng hơn khi hover */
+    }
+    .toc-content li a.active {
+        background-color: var(--lightgray); /* Nền cho mục hiện tại trong dark mode */
+        color: var(--secondary); /* Màu nhấn cho mục hiện tại */
+    }
+}
