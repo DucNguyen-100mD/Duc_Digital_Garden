@@ -30,6 +30,13 @@ jobs:
       - name: Build Quartz site
         run: npx quartz build
 
+      - name: Copy custom.css to public static
+      # Lệnh copy: cp (Linux/macOS) hoặc Copy-Item (PowerShell trên Windows)
+      # Dùng `cp` là chuẩn hơn cho môi trường GitHub Actions (Ubuntu)
+        run: |
+              mkdir -p public/static # Đảm bảo thư mục public/static tồn tại
+              cp quartz/static/custom.css public/static/custom.css # Sao chép file
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
