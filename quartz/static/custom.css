@@ -1,0 +1,89 @@
+/* custom.css */
+
+/* BƯỚC 1: Buộc HTML và BODY cho phép cuộn toàn trang */
+html {
+    height: 100% !important;
+    overflow-y: scroll !important; /* Buộc thanh cuộn luôn hiển thị và cho phép cuộn */
+    -webkit-overflow-scrolling: touch; /* Cuộn mượt trên thiết bị di động */
+}
+
+body {
+    min-height: 100% !important; /* Đảm bảo body có thể mở rộng theo nội dung */
+    height: auto !important;     /* Cho phép body tự điều chỉnh chiều cao */
+    overflow: visible !important; /* Để nội dung được hiển thị và cuộn bởi html */
+}
+
+/* BƯỚC 2: Điều chỉnh các container gốc của Quartz để chúng linh hoạt */
+#quartz-root.page, /* Sử dụng selector đặc hiệu hơn */
+#quartz-body {
+    height: auto !important;     /* Cho phép tự điều chỉnh chiều cao theo nội dung con */
+    min-height: 100vh !important; /* Đảm bảo chiều cao tối thiểu bằng viewport */
+    overflow: visible !important; /* Để nội dung tràn ra và được cuộn bởi html/body */
+
+    /* Ghi đè grid-template-rows cố định nếu nó gây vấn đề */
+    /* Nếu sau bước này vẫn không cuộn, hãy thử uncomment dòng dưới */
+    grid-template-rows: auto 1fr auto auto !important; /* Cột giữa linh hoạt hơn, các cột khác auto */
+}
+
+
+/* BƯỚC 3: TÁC ĐỘNG TRỰC TIẾP VÀO PHẦN TỬ SIDEBAR BẰNG SELECTOR CHÍNH XÁC CỦA QUARTZ */
+.page > #quartz-body .sidebar.right { /* DÙNG CHÍNH SELECTOR MÀ BẠN ĐÃ TÌM THẤY */
+    /* Đặt chiều cao tối đa dựa trên chiều cao của cửa sổ trình duyệt (viewport) */
+    /* và trừ đi chiều cao của header (phần trên cùng, khoảng 60px).
+       Bạn có thể điều chỉnh 60px này cho phù hợp với thiết kế của Quartz. */
+    max-height: calc(100vh - 60px) !important;
+
+    /* Buộc thanh cuộn dọc cho toàn bộ sidebar luôn hiển thị */
+    overflow-y: scroll !important; 
+
+    /* Đảm bảo vị trí dính và không bị che khuất */
+    position: sticky !important; 
+    top: 0px !important; 
+    bottom: 0px !important; /* Để sidebar kéo dài tới cuối màn hình */
+
+    /* Nếu bạn thấy có padding-top lớn đẩy nội dung xuống (như 96px bạn thấy trước đó),
+       có thể cần ghi đè nó nếu top: 0px là mong muốn. */
+    /* padding-top: 0 !important; */ 
+}
+
+/* BƯỚC 4: Điều chỉnh container của Table of Contents (.toc.desktop-only) */
+/* Nhớ rằng nó có overflow-y: hidden, cần ghi đè */
+.toc.desktop-only {
+    height: auto !important; /* Cho phép nó mở rộng theo nội dung */
+    max-height: unset !important; /* Xóa mọi giới hạn max-height */
+    overflow: visible !important; /* Cho phép nội dung tràn ra, để cha (sidebar) cuộn */
+}
+
+/* BƯỚC 5: Đảm bảo phần tử UL chứa các mục TOC cũng không chặn cuộn */
+.toc-content {
+    max-height: unset !important; /* Xóa mọi giới hạn chiều cao cũ */
+    overflow-y: visible !important; /* Để nó đẩy nội dung cho .sidebar cuộn */
+
+    /* Xóa hiệu ứng làm mờ ở đầu/cuối của mục lục */
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* BƯỚC 6: Tùy chỉnh thanh cuộn để làm đẹp và dễ nhìn hơn (quan trọng để gỡ lỗi) */
+/* Làm cho chúng nổi bật để bạn có thể thấy chúng rõ ràng */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.right.sidebar::-webkit-scrollbar, /* Đảm bảo selector này cũng được sử dụng */
+.toc-content::-webkit-scrollbar {
+  width: 12px; 
+  background-color: #f0f0f0; /* Nền của rãnh cuộn */
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.right.sidebar::-webkit-scrollbar-thumb, /* Đảm bảo selector này cũng được sử dụng */
+.toc-content::-webkit-scrollbar-thumb {
+  background-color: #888; /* Màu của thanh kéo cuộn */
+  border-radius: 6px; 
+  border: 2px solid #f0f0f0; /* Tạo border để dễ phân biệt với nền */
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+.right.sidebar::-webkit-scrollbar-track, /* Đảm bảo selector này cũng được sử dụng */
+.toc-content::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
