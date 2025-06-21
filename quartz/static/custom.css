@@ -147,6 +147,20 @@ table img {
 
 /************************************************ custom.css - Tùy chỉnh Dark Mode ************************************************/
 
+/* custom.css - Tùy chỉnh màu sắc chi tiết cho Dark Mode */
+
+/* Định nghĩa các biến màu tùy chỉnh cho Dark Mode */
+html[saved-theme="dark"] {
+    /* Màu cho định dạng chữ */
+    --custom-bold-dark: #D9B28C;          /* Nâu Đất */
+    --custom-em-dark: #79DAE8;            /* Xanh Lam Nhạt (Muted Cyan) */
+    --custom-underline-dark: #FFD700;     /* Vàng Đồng */
+    --custom-strikethrough-dark: #E0A0A0; /* Đỏ Nhạt */
+
+    /* Màu cho tiêu đề chính */
+    --custom-h1-dark: #5DA0D9;            /* Xanh Biển Ấm */
+}
+
 /* ----------------------------------------------------- */
 /* -- Áp dụng các style này CHỈ khi chế độ Dark Mode được bật -- */
 /* ----------------------------------------------------- */
