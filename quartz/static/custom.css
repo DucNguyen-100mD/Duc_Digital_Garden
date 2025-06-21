@@ -238,3 +238,120 @@ html[saved-theme="dark"] {
         background-color: var(--light) !important; /* Nền hơi tối hơn so với nền trang */
     }
 }
+
+
+
+
+
+
+
+/************************************************ custom.css - Tối ưu hóa mục Explorer ************************************************/
+
+.explorer {
+    /* Đảm bảo khung Explorer có đủ không gian */
+    padding: 0.5rem 1rem; /* Padding chung cho toàn bộ explorer */
+}
+
+.explorer-ul {
+    list-style: none; /* Bỏ dấu chấm mặc định của list */
+    padding: 0; /* Đảm bảo không có padding thừa từ ul */
+    margin: 0; /* Đảm bảo không có margin thừa từ ul */
+}
+
+.explorer-ul li {
+    margin: 0.2rem 0; /* Khoảng cách giữa các mục list */
+    /* overflow: hidden; */ /* Để nội dung không tràn ra ngoài li */
+}
+
+.explorer-ul li a {
+    display: block; /* Biến link thành khối để dễ click và áp dụng padding */
+    padding: 0.4rem 0.5rem; /* Padding bên trong mỗi mục link */
+    font-size: 0.9em; /* Giảm kích thước chữ một chút để vừa vặn hơn */
+    line-height: 1.3em; /* Tăng chiều cao dòng để chữ không bị dính */
+    text-decoration: none; /* Bỏ gạch chân mặc định của link */
+    color: var(--darkgray); /* Màu chữ mặc định */
+
+    /* Xử lý tiêu đề dài: cắt bớt và thêm dấu chấm lửng (...) */
+    white-space: normal; /* Cho phép chữ xuống dòng */
+    overflow-wrap: break-word; /* Nếu từ quá dài, cho phép ngắt từ */
+    /* Nếu bạn muốn cắt bớt và thêm ..., hãy uncomment 3 dòng dưới */
+    /* white-space: nowrap; */ /* Ngăn chữ xuống dòng */
+    /* overflow: hidden; */ /* Ẩn phần chữ bị tràn */
+    /* text-overflow: ellipsis; */ /* Thêm dấu ... ở cuối */
+
+    border-radius: 4px; /* Bo tròn góc link khi hover/active */
+}
+
+/* Định dạng khi mục được hover hoặc là trang hiện tại */
+.explorer-ul li a:hover {
+    background-color: var(--highlight); /* Nền khi rê chuột */
+    color: var(--dark); /* Màu chữ khi rê chuột */
+}
+
+.explorer-ul li a.active { /* Trang hiện tại đang xem */
+    background-color: var(--highlight); /* Nền cho trang hiện tại */
+    color: var(--secondary); /* Màu chữ nhấn cho trang hiện tại */
+    font-weight: 600; /* In đậm trang hiện tại */
+}
+
+/* Xử lý phân cấp thư mục/ghi chú (indentation) */
+.explorer-ul ul { /* Áp dụng cho các ul lồng nhau (sub-folder/sub-list) */
+    padding-left: 1.2em; /* Tăng lề trái để tạo phân cấp rõ ràng hơn */
+    margin-top: 0.2rem;
+}
+
+/* Định dạng cho các folder (có mũi tên) */
+.folder-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5em; /* Khoảng cách giữa mũi tên và tên folder */
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    color: var(--darkgray);
+    border-radius: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Đảm bảo nút folder chiếm toàn bộ chiều rộng */
+    text-align: left;
+}
+
+.folder-button:hover {
+    background-color: var(--highlight);
+    color: var(--dark);
+}
+
+/* Mũi tên của folder */
+.folder-icon {
+    color: var(--gray); /* Màu mũi tên */
+    transition: transform 0.2s ease-in-out;
+}
+.folder-button[aria-expanded="true"] .folder-icon {
+    transform: rotate(90deg); /* Xoay mũi tên khi folder mở */
+}
+
+/* Dark Mode cho Explorer */
+html[saved-theme="dark"] {
+    .explorer-ul li a {
+        color: var(--darkgray); /* Chữ mặc định sáng hơn trong dark mode */
+    }
+    .explorer-ul li a:hover {
+        background-color: var(--lightgray); /* Nền khi hover */
+        color: var(--dark); /* Chữ sáng hơn khi hover */
+    }
+    .explorer-ul li a.active {
+        background-color: var(--lightgray); /* Nền cho trang hiện tại */
+        color: var(--secondary); /* Màu nhấn cho trang hiện tại */
+    }
+    .folder-button {
+        color: var(--darkgray);
+    }
+    .folder-button:hover {
+        background-color: var(--lightgray);
+        color: var(--dark);
+    }
+    .folder-icon {
+        color: var(--gray);
+    }
+}
