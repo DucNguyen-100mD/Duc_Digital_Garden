@@ -259,13 +259,16 @@ html[saved-theme="dark"] {
 }
 
 .explorer-ul li {
-    margin: 0.2rem 0; /* Khoảng cách giữa các mục list */
-    /* overflow: hidden; */ /* Để nội dung không tràn ra ngoài li */
+    margin-bottom: 0.7rem; /* Tăng khoảng cách dưới mỗi mục list */
+    /* Hoặc bạn có thể thử các giá trị khác như 0.8rem, 1rem tùy ý */
+    /* margin-top cũng có thể để 0 nếu muốn spacing chỉ từ phía dưới */
+    margin-top: 0;
+    /* overflow: hidden; */ /* Giữ nguyên hoặc bỏ nếu muốn (không ảnh hưởng spacing này) */
 }
 
 .explorer-ul li a {
     display: block; /* Biến link thành khối để dễ click và áp dụng padding */
-    padding: 0.4rem 0.5rem; /* Padding bên trong mỗi mục link */
+    padding: 0.4rem 0.5rem 0.2rem 0.5rem; /* Ví dụ: giảm padding-bottom của link */
     font-size: 0.9em; /* Giảm kích thước chữ một chút để vừa vặn hơn */
     line-height: 1.3em; /* Tăng chiều cao dòng để chữ không bị dính */
     text-decoration: none; /* Bỏ gạch chân mặc định của link */
