@@ -373,8 +373,8 @@ html[saved-theme="dark"] {
 }
 
 .toc-content li {
-    margin-bottom: 0.2rem; /* Khoảng cách giữa các mục TOC riêng biệt */
-    margin-top: 0; /* Đảm bảo không có khoảng cách thừa phía trên */
+    margin-bottom: 0.3rem !important; /* Khoảng cách giữa các mục TOC riêng biệt */
+    margin-top: 0 !important; /* Đảm bảo không có khoảng cách thừa phía trên */
 }
 
 .toc-content li a {
