@@ -1,5 +1,7 @@
 /* custom.css */
 
+/************************************************ Cho phép cuộn ************************************************/
+
 /* BƯỚC 1: Buộc HTML và BODY cho phép cuộn toàn trang */
 html {
     height: 100% !important;
@@ -86,4 +88,50 @@ body::-webkit-scrollbar-track,
 .right.sidebar::-webkit-scrollbar-track, /* Đảm bảo selector này cũng được sử dụng */
 .toc-content::-webkit-scrollbar-track {
   background-color: transparent; 
+}
+
+
+
+
+
+
+/************************************************ custom.css - Styling cho bảng Markdown ************************************************/
+
+/* Áp dụng border cho toàn bộ bảng */
+table {
+    border-collapse: collapse; /* Gộp các đường biên của ô */
+    width: 100%; /* Chiếm toàn bộ chiều rộng có thể */
+    margin: 1.5rem 0; /* Khoảng cách trên/dưới bảng */
+    font-size: 0.95rem; /* Kích thước chữ nhỏ hơn một chút cho bảng */
+    border: 1px solid var(--lightgray); /* Border chung cho bảng */
+}
+
+/* Áp dụng border và padding cho tiêu đề cột (th) và ô dữ liệu (td) */
+th, td {
+    border: 1px solid var(--lightgray); /* Đường kẻ giữa các ô */
+    padding: 0.8rem 1rem; /* Khoảng cách nội dung bên trong ô */
+    text-align: left; /* Căn lề trái cho nội dung trong ô */
+}
+
+/* Định dạng cho tiêu đề cột (th) */
+th {
+    background-color: var(--lightgray); /* Nền cho hàng tiêu đề */
+    color: var(--darkgray); /* Màu chữ cho tiêu đề */
+    font-weight: 600; /* In đậm tiêu đề */
+}
+
+/* Định dạng cho các hàng chẵn/lẻ (tùy chọn) */
+tbody tr:nth-child(even) {
+    background-color: var(--light); /* Nền nhẹ hơn cho hàng chẵn */
+}
+
+/* Tùy chỉnh hover trên hàng (tùy chọn) */
+tbody tr:hover {
+    background-color: var(--highlight); /* Đổi màu khi rê chuột qua hàng */
+}
+
+/* Loại bỏ border cho hình ảnh trong bảng nếu có (tùy chọn) */
+table img {
+    border: none;
+    box-shadow: none;
 }
