@@ -373,7 +373,7 @@ html[saved-theme="dark"] {
 }
 
 .toc-content li {
-    margin-bottom: 0.1rem; /* Khoảng cách giữa các mục TOC riêng biệt */
+    margin-bottom: 0.2rem; /* Khoảng cách giữa các mục TOC riêng biệt */
     margin-top: 0; /* Đảm bảo không có khoảng cách thừa phía trên */
 }
 
@@ -393,7 +393,7 @@ html[saved-theme="dark"] {
 
 /* Điều chỉnh lại padding cho các mục con trong TOC (phân cấp) */
 .toc-content ul { /* ul lồng nhau trong TOC */
-    padding-left: 1.8em !important; /* Tăng lề trái lên RÕ RÀNG HƠN */
+    padding-left: 1.8rem !important; /* Tăng lề trái lên RÕ RÀNG HƠN */
     /* Bạn có thể thử các giá trị khác như 2em, 2.5em nếu muốn thụt lề sâu hơn nữa */
     margin-top: 0.2rem; /* Giữ nguyên hoặc điều chỉnh nếu cần */
 }
