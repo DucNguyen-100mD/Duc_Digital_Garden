@@ -454,13 +454,20 @@ html[saved-theme="dark"] {
 
 
 
-/*************************************************** custom.css - Khắc phục lỗi chồng lấp menu hamburger trên điện thoại ***************************************************/
 
-/* Áp dụng các style này chỉ trên màn hình nhỏ (điện thoại) */
+
+
+
+/*************************************************** custom.css - Điều chỉnh lề trong Explorer cho màn hình nhỏ ***************************************************/
+
 @media (max-width: 768px) {
-  .explorer {
-    /* Điều chỉnh padding-left (lề trái) của toàn bộ phần explorer để tạo khoảng trống cho nút menu */
-    padding-left: 3rem !important;
-    /* Giá trị 3rem là ước tính, bạn có thể thử 2.5rem hoặc 3.5rem tùy ý */
-  }
+    .explorer-content {
+        /* Áp dụng lề trái cho phần chứa các mục của Explorer */
+        padding-left: 3rem !important;
+    }
+
+    /* Đảm bảo tiêu đề "Explorer" không bị ảnh hưởng bởi lề này */
+    .explorer .title-button {
+        padding-left: 0 !important; /* Xóa lề nếu có */
+    }
 }
