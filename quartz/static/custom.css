@@ -435,3 +435,17 @@ html[saved-theme="dark"] {
         color: var(--secondary); /* Màu nhấn cho mục hiện tại */
     }
 }
+
+
+
+
+
+
+/************************************************** custom.css - Ẩn Graph View trên màn hình nhỏ **************************************************/
+
+/* Áp dụng các quy tắc bên trong chỉ khi màn hình có chiều rộng tối đa 768px (màn hình điện thoại) */
+@media (max-width: 768px) {
+  .graph {
+    display: none; /* Ẩn hoàn toàn phần Graph View */
+  }
+}
