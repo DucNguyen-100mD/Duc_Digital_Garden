@@ -449,3 +449,18 @@ html[saved-theme="dark"] {
     display: none; /* Ẩn hoàn toàn phần Graph View */
   }
 }
+
+
+
+
+
+/*************************************************** custom.css - Khắc phục lỗi chồng lấp menu hamburger trên điện thoại ***************************************************/
+
+/* Áp dụng các style này chỉ trên màn hình nhỏ (điện thoại) */
+@media (max-width: 768px) {
+  .explorer {
+    /* Điều chỉnh padding-left (lề trái) của toàn bộ phần explorer để tạo khoảng trống cho nút menu */
+    padding-left: 3rem !important;
+    /* Giá trị 3rem là ước tính, bạn có thể thử 2.5rem hoặc 3.5rem tùy ý */
+  }
+}
