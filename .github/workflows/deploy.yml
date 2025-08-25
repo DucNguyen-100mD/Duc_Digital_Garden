@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Để đảm bảo graph view hoạt động đúng
 
@@ -31,7 +31,7 @@ jobs:
         run: npx quartz build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public # Thư mục output của Quartz là 'public' theo mặc định
 
