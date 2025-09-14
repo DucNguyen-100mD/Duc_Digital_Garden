@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		{"id":"3188e368ea701472","x":1060,"y":-320,"width":700,"height":500,"type":"group","label":"3. Nhập liệu"},
+		{"id":"input_se","type":"text","text":"➡️ **ĐẦU VÀO**\n\nYêu cầu từ **Sales Executive**\n(qua Email, Zalo, gọi điện...)","x":-920,"y":-80,"width":300,"height":150,"color":"4"},
+		{"id":"coordinator_hub","type":"text","text":"👤\n## Sales Coordinator\n\n*Trung tâm tiếp nhận & xử lý thông tin*","x":-480,"y":-95,"width":300,"height":180},
+		{"id":"interruption_2","type":"text","text":"☎️ **CUỘC GỌI**\n(Từ bộ phận khác hỏi thông tin)","x":-220,"y":-320,"width":200,"height":100,"color":"1"},
+		{"id":"title_interruptions","type":"text","text":"#### Luồng công việc bị ngắt quãng bởi:","x":-470,"y":-400,"width":450,"height":50},
+		{"id":"interruption_1","type":"text","text":"🔥 **YÊU CẦU GẤP**\n(Từ Sales Exec khác)","x":-480,"y":-320,"width":200,"height":100,"color":"1"},
+		{"id":"process_4","type":"text","text":"**4. Tạo BEO (Banquet Event Order)**\n\n\"Dịch\" tất cả yêu cầu của khách hàng thành một tài liệu vận hành chi tiết.","x":400,"y":420,"width":300,"height":100,"color":"3"},
+		{"id":"tool_4","type":"text","text":"📝 **Công cụ:** Microsoft Word","x":400,"y":540,"width":300,"height":60},
+		{"id":"pain_point_4","type":"text","text":"❗️**Nỗi đau:** Cực kỳ tốn thời gian, rủi ro \"tam sao thất bản\" rất cao khi diễn giải yêu cầu.","x":400,"y":620,"width":300,"height":100,"color":"1"},
+		{"id":"process_5","type":"text","text":"**5. Phân phối BEO**\n\nSoạn email, đính kèm file BEO, gửi đến tất cả các bộ phận liên quan.","x":850,"y":420,"width":300,"height":100,"color":"2"},
+		{"id":"tool_5","type":"text","text":"✉️ **Công cụ:** Email","x":850,"y":540,"width":300,"height":60},
+		{"id":"pain_point_5","type":"text","text":"❗️**Nỗi đau:** Phải theo dõi thủ công xem ai đã đọc, ai đã xác nhận. Khó quản lý phiên bản khi có thay đổi.","x":850,"y":620,"width":300,"height":100,"color":"1"},
+		{"id":"pain_point_3","type":"text","text":"❗️**Nỗi đau:** Nhập liệu lặp lại (redundant). Thông tin trên CRM và PMS có thể không khớp nhau.","x":1080,"y":30,"width":300,"height":140,"color":"1"},
+		{"id":"tool_3a","type":"text","text":"🗄️ **Công cụ:** HubSpot CRM","x":1420,"y":-40,"width":300,"height":60},
+		{"id":"process_3","type":"text","text":"**3A. Nhập liệu vào CRM**\n\n- Cập nhật trạng thái Deal\n- Ghi chú thông tin\n- Đính kèm hợp đồng","x":1420,"y":-300,"width":300,"height":220,"color":"5"},
+		{"id":"tool_3b","type":"text","text":"🏨 **Công cụ:** Hệ thống PMS","x":1080,"y":-30,"width":300,"height":50},
+		{"id":"process_3b","type":"text","text":"**3B. Nhập liệu vào PMS**\n\n- Tạo booking\n- Block phòng\n- Ghi chú các yêu cầu đặc biệt","x":1080,"y":-300,"width":300,"height":240,"color":"5"},
+		{"id":"output_departments","type":"text","text":"🏁 **ĐẦU RA**\n\n- Bếp (F&B)\n- Nhà hàng (F&B)\n- Tiền sảnh (FOM)\n- Kỹ thuật (CE)","x":1340,"y":315,"width":300,"height":310,"color":"6"},
+		{"id":"booking_confirmed","type":"text","text":"✅ **Booking được xác nhận**","x":0,"y":430,"width":250,"height":80,"color":"6"},
+		{"id":"process_1","type":"text","text":"**1. Soạn thảo Báo giá / Hợp đồng**\n\nMở file mẫu, copy-paste thông tin khách hàng, điều chỉnh điều khoản.","x":60,"y":-100,"width":300,"height":200,"color":"3"},
+		{"id":"tool_1","type":"text","text":"📝 **Công cụ:** Microsoft Word, Excel","x":60,"y":120,"width":300,"height":60},
+		{"id":"pain_point_1","type":"text","text":"❗️**Nỗi đau:** Tốn thời gian, dễ sai sót khi sao chép thủ công.","x":60,"y":200,"width":300,"height":80,"color":"1"},
+		{"id":"pain_point_2","type":"text","text":"❗️**Nỗi đau:** Quy trình chậm, phụ thuộc vào tốc độ phản hồi của quản lý. Khó theo dõi.","x":500,"y":100,"width":300,"height":100,"color":"1"},
+		{"id":"process_2","type":"text","text":"**2. Gửi Quản lý phê duyệt**\n\nĐính kèm file vào email, gửi cho Sales Manager và chờ phản hồi.","x":500,"y":-80,"width":300,"height":160,"color":"2"}
+	],
+	"edges":[
+		{"id":"edge_1","fromNode":"input_se","fromSide":"right","toNode":"coordinator_hub","toSide":"left"},
+		{"id":"edge_2","fromNode":"coordinator_hub","fromSide":"right","toNode":"process_1","toSide":"left","label":"Bắt đầu xử lý"},
+		{"id":"edge_3","fromNode":"process_1","fromSide":"right","toNode":"process_2","toSide":"left"},
+		{"id":"edge_5","fromNode":"process_4","fromSide":"right","toNode":"process_5","toSide":"left"},
+		{"id":"edge_6","fromNode":"process_5","fromSide":"right","toNode":"output_departments","toSide":"left"},
+		{"id":"edge_7","fromNode":"interruption_1","fromSide":"bottom","toNode":"coordinator_hub","toSide":"top","color":"1"},
+		{"id":"edge_8","fromNode":"interruption_2","fromSide":"bottom","toNode":"coordinator_hub","toSide":"top","color":"1"},
+		{"id":"edge_10","fromNode":"booking_confirmed","fromSide":"right","toNode":"process_4","toSide":"left"},
+		{"id":"edge_11","fromNode":"process_2","fromSide":"right","toNode":"3188e368ea701472","toSide":"left","label":"Đã phê duyệt"},
+		{"id":"edge_12","fromNode":"3188e368ea701472","fromSide":"bottom","toNode":"booking_confirmed","toSide":"top"}
+	]
+}
